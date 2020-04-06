@@ -17,5 +17,6 @@ dependencies {
     compile group: 'com.codeborne', name: 'selenide', version: '5.10.0'
     // https://mvnrepository.com/artifact/com.tngtech.java/junit-dataprovider
     testCompile group: 'com.tngtech.java', name: 'junit-dataprovider', version: '1.9.3'
-
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.18.12'
 }
