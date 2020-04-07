@@ -19,4 +19,7 @@ dependencies {
     testCompile group: 'com.tngtech.java', name: 'junit-dataprovider', version: '1.9.3'
     // https://mvnrepository.com/artifact/org.projectlombok/lombok
     compile group: 'org.projectlombok', name: 'lombok', version: '1.18.12'
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-pool2
+    compile group: 'org.apache.commons', name: 'commons-pool2', version: '2.8.0'
+
 }

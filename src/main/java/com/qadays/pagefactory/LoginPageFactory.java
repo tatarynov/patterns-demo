@@ -1,5 +1,6 @@
 package com.qadays.pagefactory;
 
+
 public class LoginPageFactory {
 
     public LoginPage getInstance() {

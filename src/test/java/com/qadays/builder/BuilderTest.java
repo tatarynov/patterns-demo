@@ -3,14 +3,12 @@ package com.qadays.builder;
 import com.tngtech.java.junit.dataprovider.DataProvider;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
-import jdk.nashorn.internal.runtime.logging.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static com.qadays.builder.CheckCreditCard.verifyCreditCard;
 import static org.junit.Assert.assertTrue;
 
-@Logger
 @RunWith(DataProviderRunner.class)
 public class BuilderTest {
 
