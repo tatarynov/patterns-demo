@@ -8,6 +8,9 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import static com.qadays.builder.CheckCreditCard.verifyCreditCard;
+import static org.junit.Assert.assertTrue;
+
 @Logger
 @RunWith(DataProviderRunner.class)
 public class BuilderTest {
@@ -33,7 +36,8 @@ public class BuilderTest {
                 .build();
 
         // check the credit card
-        Assert.assertTrue(CheckCreditCard.testCreditCard(testCreditCard));
+        boolean expectedResult = verifyCreditCard(testCreditCard);
+        assertTrue(expectedResult);
     }
 }
 

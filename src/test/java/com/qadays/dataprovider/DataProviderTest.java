@@ -1,13 +1,14 @@
 package com.qadays.dataprovider;
 
-import com.qadays.builder.CheckCreditCard;
 import com.qadays.builder.CreditCard;
 import com.tngtech.java.junit.dataprovider.DataProvider;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import static com.qadays.builder.CheckCreditCard.verifyCreditCard;
+import static org.junit.Assert.assertTrue;
 
 
 /***
@@ -41,7 +42,8 @@ public class DataProviderTest {
     @UseDataProvider("dataProvider")
     public void testCreditCard(CreditCard testCreditCard) {
         // check the credit card
-        Assert.assertTrue(CheckCreditCard.testCreditCard(testCreditCard));
+        boolean expectedResult = verifyCreditCard(testCreditCard);
+        assertTrue(expectedResult);
     }
 }
 
