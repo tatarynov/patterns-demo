@@ -2,7 +2,7 @@ package com.qadays.builder;
 
 public class CheckCreditCard {
 
-    public static boolean testCreditCard(CreditCard creditCard) {
+    public static boolean verifyCreditCard(CreditCard creditCard) {
         return creditCard != null;
     }
 

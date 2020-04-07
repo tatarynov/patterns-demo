@@ -15,7 +15,7 @@ public class PageFactoryExample {
         LoginPage loginPage = pageFactory.getInstance();
         loginPage.logIn("Test", "Test");
 
-        // login successfull
+        // dumb assertion
         Assert.assertTrue(true);
     }
 
@@ -24,10 +24,12 @@ public class PageFactoryExample {
         WebDriver driver = new ChromeDriver();
 
         // you can create page object using PageFactory selenium class
-        AnotherPageFactoryExample examplePage = PageFactory.initElements(driver,
-                AnotherPageFactoryExample.class);
+        LoginAnotherPageFactory loginPage = PageFactory.initElements(
+                driver, LoginAnotherPageFactory.class);
 
-        // login successfull
+        loginPage.search("QA Days");
+
+        // dumb assertion
         Assert.assertTrue(true);
     }
 }

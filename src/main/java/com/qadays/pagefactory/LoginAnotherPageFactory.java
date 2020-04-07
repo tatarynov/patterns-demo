@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class AnotherPageFactoryExample {
+public class LoginAnotherPageFactory {
 
     @FindBy(css = "[name='q']")
     private SelenideElement searchInput;

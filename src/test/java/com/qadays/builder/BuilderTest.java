@@ -23,6 +23,7 @@ public class BuilderTest {
     @Test
     @UseDataProvider("dataProvider")
     public void testCreditCard(int creditCardNumber, String name, int cvc, String date) {
+        // you can build
         CreditCard testCreditCard = CreditCard
                 .builder()
                 .creditCardNumber(creditCardNumber)
