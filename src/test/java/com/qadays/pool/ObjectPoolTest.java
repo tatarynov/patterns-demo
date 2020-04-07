@@ -1,9 +1,11 @@
 package com.qadays.pool;
 
+import lombok.extern.java.Log;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+@Log
 public class ObjectPoolTest {
 
     private TestUser testUser;
@@ -14,8 +16,7 @@ public class ObjectPoolTest {
     }
 
     @Test
-    public void testCreditCard() {
-        // check the credit card object instead of verifying each field
+    public void testUserFields() {
         Assert.assertFalse("User password is empty", testUser.getPassword().isEmpty());
         Assert.assertFalse("User email is empty", testUser.getEmail().isEmpty());
     }
