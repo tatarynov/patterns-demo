@@ -4,7 +4,6 @@ import com.tngtech.java.junit.dataprovider.DataProvider;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
 import jdk.nashorn.internal.runtime.logging.Logger;
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 

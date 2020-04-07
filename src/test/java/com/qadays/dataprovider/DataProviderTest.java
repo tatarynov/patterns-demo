@@ -21,15 +21,13 @@ public class DataProviderTest {
     @DataProvider
     public static Object[][] dataProvider() {
         return new Object[][]{
-                {CreditCard
-                        .builder()
+                {CreditCard.builder()
                         .name("Name")
                         .creditCardNumber(1234567891)
                         .cvc(123)
                         .date("12/03")
                         .build()},
-                {CreditCard
-                        .builder()
+                {CreditCard.builder()
                         .name("Name")
                         .creditCardNumber(1234567891)
                         .cvc(123)
@@ -41,9 +39,9 @@ public class DataProviderTest {
     @Test
     @UseDataProvider("dataProvider")
     public void testCreditCard(CreditCard testCreditCard) {
-        // check the credit card
+        // check the credit card object instead of verifying each field
         boolean expectedResult = verifyCreditCard(testCreditCard);
-        assertTrue(expectedResult);
+        assertTrue("Credit card does not meet expected result", expectedResult);
     }
 }
 

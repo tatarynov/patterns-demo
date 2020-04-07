@@ -2,7 +2,9 @@ package com.qadays.builder;
 
 
 import lombok.Builder;
+import lombok.Getter;
 
+@Getter
 @Builder
 public class CreditCard {
 

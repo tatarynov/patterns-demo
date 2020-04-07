@@ -9,7 +9,7 @@ import static org.junit.Assert.assertTrue;
 
 /***
  * The example for ValueObject pattern
- * The one test can be extended with multiple data sets to enable Data Driven Approach
+ * It's better to use objects which reflect your business logic for verification
  */
 public class ValueObjectTest {
 
@@ -28,9 +28,13 @@ public class ValueObjectTest {
     @Test
     public void testCreditCard() {
         // check the credit card object instead of verifying each field
-        assertTrue(verifyCreditCard(creditCard));
+        boolean expectedResult = verifyCreditCard(creditCard);
+        assertTrue("Credit card does not meet expected result", expectedResult);
     }
 }
+
+
+
 
 
 
