@@ -1,6 +1,6 @@
 package com.qadays.facade;
 
-public class FacadeApiClient {
+public class FacadeApiClient implements ApiClient {
 
 
     public void get() {
