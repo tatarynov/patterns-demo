@@ -1,6 +1,9 @@
 package com.qadays.chaining;
 
+import com.qadays.builder.CreditCard;
 import org.junit.Test;
+
+import static io.restassured.RestAssured.with;
 
 public class ChainingTest {
 
@@ -20,5 +23,14 @@ public class ChainingTest {
         meetupMainPage.openSavedEvents();
         meetupMainPage.openUpcomingEvents();
         MeetupProfilePage meetupProfilePage = meetupMainPage.goToProfile();
+    }
+
+    @Test
+    public void whenRequestedPost_thenCreated() {
+        with().body(CreditCard.builder().build())
+                .when()
+                .request("POST", "/odds/new")
+                .then()
+                .statusCode(201);
     }
 }
